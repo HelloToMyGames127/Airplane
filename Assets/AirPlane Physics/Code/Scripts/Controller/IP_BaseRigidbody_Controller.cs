@@ -24,7 +24,7 @@ namespace Vishal
             }
         }
 
-        // Update is called once per frame
+        // FixedUpdate is called once per each frame
         void FixedUpdate()
         {
             if (rb)
