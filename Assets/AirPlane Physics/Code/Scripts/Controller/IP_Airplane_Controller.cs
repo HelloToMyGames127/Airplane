@@ -16,6 +16,26 @@ namespace Vishal
         public float airplaneweight = 800f;
         #endregion
 
+        #region Constants
+        private float poundsTokg = 0.453592f;
+        #endregion
+
+        #region Buildin methods
+        protected override void Start()
+        {
+            base.Start();
+            float massinkg = airplaneweight * poundsTokg;
+            if (rb)
+            {
+                rb.mass = massinkg;
+            }
+            if (centerOfGravity)
+            {
+                rb.centerOfMass = centerOfGravity.localPosition;
+            }
+        }
+        #endregion
+
         #region Buildin methods
         protected override void HandlePhysics()
         {

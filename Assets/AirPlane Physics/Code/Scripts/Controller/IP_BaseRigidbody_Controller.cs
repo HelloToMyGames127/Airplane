@@ -8,13 +8,13 @@ namespace Vishal
     public class IP_BaseRigidbody_Controller : MonoBehaviour
     {
         #region private variables
-        private Rigidbody rb;
-        private AudioSource aSource;
+        protected Rigidbody rb;
+        protected AudioSource aSource;
         #endregion
 
         #region Buildin methods
         // Use this for initialization
-        void Start()
+        protected virtual void Start()
         {
             rb = GetComponent<Rigidbody>();
             aSource = GetComponent<AudioSource>();
