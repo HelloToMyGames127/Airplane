@@ -35,7 +35,7 @@ namespace Vishal
         #endregion
 
         #region Custom methods
-        protected virtual void HandlePhysics() { }
+        protected virtual void HandlePhysics() {}
         #endregion
     }
 }
