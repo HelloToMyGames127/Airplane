@@ -42,11 +42,13 @@ namespace Vishal
             }
             if(wheels != null)
             {
+               
                 if(wheels.Count > 0)
                 {
-                    foreach(IP_Airplane_Wheel wheel in wheels)
-                    {
 
+                    foreach (IP_Airplane_Wheel wheel in wheels)
+                    {
+                        wheel.InitWheel();
                     }
                 }
             }
@@ -75,7 +77,7 @@ namespace Vishal
                 {
                     foreach (IP_Airplane_Engine engine in engines)
                     {
-                        engine.CalculateForce(input.Throttle);
+                        rb.AddForce(engine.CalculateForce(input.Throttle));
                     }
                 }
             }
